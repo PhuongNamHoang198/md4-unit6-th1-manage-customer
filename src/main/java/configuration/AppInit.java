@@ -21,11 +21,17 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
+
         return new Class[0];
     }
 
     @Override
     protected String[] getServletMappings() {
+//getservletmappings dung de map url
         return new String[] { "/" };
+        //string array là một mảng các chuỗi
+        //mỗi chuỗi là một url mapping
+        //nó sẽ được sử dụng để mapping các request đến các controller
+
     }
 }

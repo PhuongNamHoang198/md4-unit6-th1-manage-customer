@@ -8,6 +8,7 @@ import java.util.List;
 
 public class CustomerService implements ICustomerService {
     @Autowired
+    // autowired dung de goi repository
     private ICustomerRepository customerRepository;
 
     @Override

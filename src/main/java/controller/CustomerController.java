@@ -13,6 +13,7 @@ import service.ICustomerService;
 import java.util.List;
 
 @Controller
+//
 public class CustomerController {
      @Autowired
      //autowired dung de goi service

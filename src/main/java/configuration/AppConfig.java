@@ -107,7 +107,7 @@ public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
-        em.setPackagesToScan("com.codegym.cms.model");
+        em.setPackagesToScan("model");
 
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
@@ -120,12 +120,16 @@ public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
     //Cấu hình DataSource
     @Bean
     public DataSource dataSource() {
+        // DataSource
+        // Cac class thuc thi interface nay se cung cap cac thong tin ve ket noi den database
+        //DataSource dung de cung cap cac thong tin ve ket noi den database
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/demo");
         dataSource.setUsername("root");
         dataSource.setPassword("88888888");
         return dataSource;
+
     }
 //
     @Bean
